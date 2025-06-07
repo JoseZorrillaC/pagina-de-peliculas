@@ -1,0 +1,143 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #121212;
+  color: #e0e0e0;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  max-width: 1200px; 
+  margin: 2rem auto;  
+  padding: 0 1rem;  
+}
+
+header {
+  background-color: #1e1e1e;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 1.5rem;
+}
+
+header nav a {
+  color: #e0e0e0;
+  margin-left: 1.5rem;
+  text-decoration: none;
+}
+
+header nav a:hover {
+  color: #1e88e5;
+}
+
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  justify-items: center;
+}
+
+.galeria img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover; 
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.galeria img:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .galeria {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.contacto-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+form label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  background-color: #1e1e1e;
+  color: white;
+  border: 1px solid #333;
+  font-size: 1rem;
+}
+
+form button {
+  padding: 0.7rem;
+  background-color: #1e88e5;
+  color: white;
+  border: none;
+  width: 100%;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+form button:hover {
+  background-color: #1565c0;
+}
+
+footer {
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+  padding: 2rem;
+  text-align: center;
+}
+
+footer nav {
+  margin-top: 1rem;
+}
+
+footer nav a {
+  margin: 0 1rem;
+  color: #e0e0e0;
+  text-decoration: none;
+}
+
+footer nav a:hover {
+  color: #1e88e5;
+}
+
+footer .sociales a {
+  color: white;
+  margin: 0 1rem;
+  text-decoration: none;
+  font-size: 1.5rem;
+  transition: transform 0.2s ease;
+}
+
+footer .sociales a:hover {
+  color: #1e88e5;
+  transform: scale(1.2);
+}
